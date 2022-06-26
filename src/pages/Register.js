@@ -41,15 +41,13 @@ export default function Register() {
       return toast.error('Provide all fields');
     }
     if (isMember) {
-      dispatch(loginUser({ email, password }));
-    } else {
-      dispatch(registerUser({ name, email, password }));
+      return dispatch(loginUser({ email, password }));
     }
+    dispatch(registerUser({ name, email, password }));
   }
 
   useEffect(() => {
     if (user) {
-      console.log(user);
       navigate('/');
     }
   }, [user]);

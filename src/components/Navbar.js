@@ -17,7 +17,7 @@ export default function Navbar() {
     setShowLogout((prev) => !prev);
   }
   function logout() {
-    dispatch(logoutUser());
+    dispatch(logoutUser('Logged out...'));
   }
 
   return (

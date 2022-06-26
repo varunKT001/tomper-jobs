@@ -10,8 +10,8 @@ export default function FormRow({
       <label htmlFor={name} className='form-label'>
         {labelText || name}
       </label>
-
       <input
+        id={name}
         type={type}
         value={value}
         name={name}

@@ -25,7 +25,7 @@ TopperJobs is a job application tracking application that keeps track of the job
 
 - [x] User authentication.
 - [x] Added, update or remove applications.
-- [x] Search jobs by it `name`, `type`, `status` etc.
+- [x] Search jobs by its `name`, `type`, `status` etc.
 - [x] Responsive for all screen sizes.
 
 #### ⚙ Tools and Technologies used

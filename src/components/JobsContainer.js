@@ -1,17 +1,33 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Job from './Job';
 import Loading from './Loading';
+import PageBtnContainer from './PageBtnContainer';
 import Wrapper from '../assets/wrappers/JobsContainer';
 import { useSelector, useDispatch } from 'react-redux';
 import { getAllJobs } from '../redux/allJobs/allJobsSlice';
 
 export default function JobsContainer() {
   const dispatch = useDispatch();
-  const { jobs, isLoading } = useSelector((store) => store.allJobs);
+  const {
+    jobs,
+    isLoading,
+    totalJobs,
+    numOfPages,
+    page,
+    search,
+    searchStatus,
+    searchType,
+    sort,
+  } = useSelector((store) => store.allJobs);
 
   useEffect(() => {
     dispatch(getAllJobs());
   }, []);
+
+  useEffect(() => {
+    dispatch(getAllJobs());
+    // eslint-disable-next-line
+  }, [page, search, searchStatus, searchType, sort]);
 
   if (isLoading) {
     return <Loading center />;
@@ -27,12 +43,15 @@ export default function JobsContainer() {
 
   return (
     <Wrapper>
-      <h5>jobs info</h5>
+      <h5>
+        {totalJobs} job{jobs.length > 1 && 's'} found
+      </h5>
       <div className='jobs'>
         {jobs.map((job) => {
           return <Job key={job._id} {...job} />;
         })}
       </div>
+      {numOfPages > 1 && <PageBtnContainer />}
     </Wrapper>
   );
 }

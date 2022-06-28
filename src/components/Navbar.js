@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Logo from './Logo';
 import Wrapper from '../assets/wrappers/Navbar';
 import { useDispatch, useSelector } from 'react-redux';
-import { logoutUser, toggleSidebar } from '../redux/user/userSlice';
+import { clearStore, toggleSidebar } from '../redux/user/userSlice';
 import { FaAlignLeft, FaUserCircle, FaCaretDown } from 'react-icons/fa';
 
 export default function Navbar() {
@@ -17,7 +17,7 @@ export default function Navbar() {
     setShowLogout((prev) => !prev);
   }
   function logout() {
-    dispatch(logoutUser('Logged out...'));
+    dispatch(clearStore('Logout Successful...'));
   }
 
   return (

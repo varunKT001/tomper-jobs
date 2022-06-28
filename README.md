@@ -14,7 +14,7 @@
 This is the frontend Tomper-Jobs, build with <a href='https://reactjs.org/' target='_blank'>React.js</a> and <a href='https://redux-toolkit.js.org/' target='_blank'>Redux-Toolkit</a>, and hosted with <a href='https://www.netlify.com/' target='_blank'>Netlify</a>
 </p>
 <p align='center'>
-<img src='./assets/Tomper-Jobs.PNG' >
+<img src='./assets/Tomper-Jobs.png' >
 </p>
 
 #### 🧾 Description

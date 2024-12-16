@@ -5,7 +5,9 @@
 <b>Job Application tracking application build with <a href='https://reactjs.org/' target='_blank'>React.js</a> and <a href='https://redux-toolkit.js.org/' target='_blank'>Redux-Toolkit</a></b>
 </p>
 <p align='center'>
-<a href='https://tomper-jobs.netlify.app/' target='_blank'>https://tomper-jobs.netlify.app</a>
+<a href='https://tomper-jobs.netlify.app/' target='_blank'>https://tomper-jobs.netlify.app</a> (cloud-based)
+<br/>
+<a href='https://tj.varuntiwari.com' target='_blank'>tj.varuntiwari.com</a> (self-hosted)
 </p>
 
 ---
